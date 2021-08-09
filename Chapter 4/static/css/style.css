@@ -1,0 +1,228 @@
+#page {
+    background-color: #9C835F;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.block {
+    display: flex;
+    width: 180px;
+    height:100px;
+    background-color: #4C9654;
+    background-size: 180px 100px;
+    border-radius: 10px;
+    transform: rotate(-20deg); 
+    display: none;
+    font-size: 28px;
+    color: white;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px; font-weight: bold;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+
+#user img{
+    width: 90px;
+    height: 90px;
+}
+
+#com img {
+    width: 90px;
+    height: 90px;
+}
+
+h2 {
+    font-size: 28px;
+}
+
+#vs {
+    color:#BD0000; 
+    font-size: 75px; 
+    font-weight: bold; 
+    display: block;
+}
+
+.row {
+    height: 33.3%; 
+    border-radius: 10px;
+}
+
+#title{
+    font-size: 44px;
+    color: #724C21;
+    padding-left: 15px;
+}
+
+#rock{
+    color: #F9B23D;
+    font-size: 32px; 
+    padding-left: 15px;
+}
+
+#restart img{
+    width: 60px;
+    height: 60px;
+}
+
+#logo{
+        width:'68px';
+        height:'68px';
+        padding-left: 15px;
+    }
+
+
+@media screen and (max-width: 660px) {
+    
+    #title{
+    font-size: 38px;
+    }
+
+    #rock{
+        font-size: 28px;
+    }
+    
+    h2 {
+        font-size: 20px;
+    }
+
+    #com img {
+        width: 70px;
+        height: 70px;
+    }
+
+    #user img {
+        width: 70px;
+        height: 70px;
+    }
+
+    #vs {
+        font-size: 60px;
+    }
+
+    #restart img{
+        width: 40px;
+        height: 40px;   
+    }
+
+    #head img {
+        width: 58px;
+        height: 58px;  
+    }
+
+    .block{
+        width: 110px;
+        height:65px;
+        background-size: 110px 65px;
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 510px) {
+    
+    #title{
+    font-size: 30px;
+    }
+
+    #rock{
+        font-size: 22px;
+    }
+    
+    h2 {
+        font-size: 16px;
+    }
+
+
+    #vs {
+        font-size: 45px;
+    }
+
+    #head img {
+        width: 50px;
+        height: 50px;  
+    }
+
+    .block{
+        width: 90px;
+        height:55px;
+        background-size: 90px 55px;
+        font-size: 16px;
+    }
+    
+}
+
+@media screen and (max-width: 440px) {
+
+    h2{
+        font-size: 12px;
+    }
+
+    .block{
+        width: 70px;
+        height:45px;
+        background-size: 70px 45px;
+        font-size: 12px;
+    }
+
+    #vs {
+        font-size: 35px;
+    }
+       
+}
+
+@media screen and (max-width: 380px) {
+
+    #title{
+    font-size: 26px;
+    }
+
+    #rock{
+        font-size: 18px;
+    }
+
+    #head img {
+        width: 42px;
+        height: 42px;  
+    }
+    
+    .block{
+        width: 75px;
+        height:45px;
+        font-size: 18px;
+    }
+    #com img {
+        width: 55px;
+        height: 55px;
+    }
+
+    #user img {
+        width: 55px;
+        height: 55px;
+    }
+
+    #restart img{
+        width: 30px;
+        height: 30px;   
+    }
+
+    h2{
+        font-size: 10px;
+    }
+
+    .block{
+        width: 50px;
+        height:35px;
+        background-size: 50px 35px;
+        font-size: 10px;
+    }
+
+    #vs {
+        font-size: 30px;
+    }
+}
