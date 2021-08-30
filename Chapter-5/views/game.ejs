@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang='en'>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+
+    <!-- Bootstrap CSS -->
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm' crossorigin='anonymous'>
+    <link rel='preconnect' href='https://fonts.googleapis.com'>
+    <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
+    <link href='https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&display=swap' rel='stylesheet'>
+    <title>CHAPTER 4</title>
+  </head>
+  <body>
+    <style> 
+        #page {
+            background-color: #9C835F;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+
+        .block {
+            display: flex;
+            width: 180px;
+            height:100px;
+            background-color: #4C9654;
+            background-size: 180px 100px;
+            border-radius: 10px;
+            transform: rotate(-20deg); 
+            display: none;
+            font-size: 28px;
+            color: white;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px; font-weight: bold;
+        }
+
+        body{
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        #user img{
+            width: 90px;
+            height: 90px;
+        }
+
+        #com img {
+            width: 90px;
+            height: 90px;
+        }
+
+        h2 {
+            font-size: 28px;
+            font-weight: bolder;
+        }
+
+        #vs {
+            color:#BD0000; 
+            font-size: 75px; 
+            font-weight: bold; 
+            display: block;
+        }
+
+        .row {
+            height: 33.3%; 
+            border-radius: 10px;
+        }
+
+        #title{
+            font-size: 44px;
+            color: #724C21;
+            padding-left: 15px;
+            font-weight: bolder;
+        }
+
+        #rock{
+            color: #F9B23D;
+            font-size: 32px; 
+            padding-left: 15px;
+        }
+
+        #restart img{
+            width: 60px;
+            height: 60px;
+        }
+
+        #logo{
+            width:'68px';
+            height:'68px';
+            padding-left: 15px;
+        }
+
+
+        @media screen and (max-width: 660px) {
+            
+            #title{
+                font-size: 38px;
+                font-weight: bolder;
+            }
+
+            #rock{
+                font-size: 28px;
+            }
+            
+            h2 {
+                font-size: 20px;
+                font-weight: bolder;
+            }
+
+            #com img {
+                width: 70px;
+                height: 70px;
+            }
+
+            #user img {
+                width: 70px;
+                height: 70px;
+            }
+
+            #vs {
+                font-size: 60px;
+                font-weight: bolder;
+            }
+
+            #restart img{
+                width: 40px;
+                height: 40px;   
+            }
+
+            #head img {
+                width: 58px;
+                height: 58px;  
+            }
+
+            .block{
+                width: 110px;
+                height:65px;
+                background-size: 110px 65px;
+                font-size: 20px;
+            }
+        }
+
+        @media screen and (max-width: 510px) {
+            
+            #title{
+            font-size: 30px;
+            font-weight: bolder;
+            }
+
+            #rock{
+                font-size: 22px;
+            }
+            
+            h2 {
+                font-size: 16px;
+                font-weight: bolder;
+            }
+
+
+            #vs {
+                font-size: 45px;
+                font-weight: bolder;
+            }
+
+            #head img {
+                width: 50px;
+                height: 50px;  
+            }
+
+            .block{
+                width: 90px;
+                height:55px;
+                background-size: 90px 55px;
+                font-size: 16px;
+            }
+            
+        }
+
+        @media screen and (max-width: 440px) {
+
+            h2{
+                font-size: 12px;
+                font-weight: bolder;
+            }
+
+            .block{
+                width: 70px;
+                height:45px;
+                background-size: 70px 45px;
+                font-size: 12px;
+            }
+
+            #vs {
+                font-size: 35px;
+                font-weight: bolder;
+            }
+            
+        }
+
+        @media screen and (max-width: 380px) {
+
+            #title{
+            font-size: 26px;
+            font-weight: bolder;
+            }
+
+            #rock{
+                font-size: 18px;
+            }
+
+            #head img {
+                width: 42px;
+                height: 42px;  
+            }
+            
+            .block{
+                width: 75px;
+                height:45px;
+                font-size: 18px;
+            }
+            #com img {
+                width: 55px;
+                height: 55px;
+            }
+
+            #user img {
+                width: 55px;
+                height: 55px;
+            }
+
+            #restart img{
+                width: 30px;
+                height: 30px;   
+            }
+
+            h2{
+                font-size: 10px;
+                font-weight: bolder;
+            }
+
+            .block{
+                width: 50px;
+                height:35px;
+                background-size: 50px 35px;
+                font-size: 10px;
+            }
+
+            #vs {
+                font-size: 30px;
+                font-weight: bolder;
+            }
+        }
+    </style>
+
+    <section id = 'page'>
+        <nav class='navbar' id = 'head'>
+            <div class='navbar-brand mb-0 font-weight-bold'>
+                <a id = "title" href='/'><</a>
+                <img src='/images/logo.svg' class='d-inline-block align-top' alt='' id = "logo">
+                <a id = "rock"> ROCK PAPER SCISSORS </a>
+            </div>
+        </nav>
+        <div class='container w-75 h-75 d-inline-block d-flex' style='padding-top: 50px;'>
+            <div class='col-lg-4 d-flex flex-column'style='border: 1px' id = 'user'>
+                <h2 class='text-center font-weight-bold'>PLAYER 1</h2>
+                <div class= 'row d-flex justify-content-center align-items-center' id= 'batuuser'>
+                    <img src='/images/batu.png' alt='' >
+                </div>
+                <div class= 'row d-flex justify-content-center align-items-center' id= 'kertasuser'>
+                    <img src='/images/kertas.png' alt=''>
+                </div>
+                <div class= 'row d-flex justify-content-center align-items-center' id= 'guntinguser'>
+                    <img src='/images/gunting.png'alt=''> 
+                </div>
+            </div> 
+            <div class='col-lg-4 align-items-center'>
+                <div class= 'row d-flex justify-content-center align-items-center' style='height: 90%;'>
+                    <p id='vs'>VS</p>
+                    <div id='result' class= 'block'>
+                        ...
+                    </div>
+                </div>
+                <div class= 'row d-flex justify-content-center align-items-end' id='restart' style='height:10%;' onclick="game.resetGame()">
+                    <img src='/images/refresh.png' alt='' >
+                </div>
+            </div>
+            <div class='col-lg-4 d-flex flex-column'style='border: 1px' id = 'com'>
+                <h2 class='text-center font-weight-bold'>COM</h2>
+                <div class= 'row d-flex justify-content-center align-items-center' id= 'batu'>
+                    <img src='/images/batu.png' alt='' >
+
+                </div>
+                <div class= 'row d-flex justify-content-center align-items-center' id= 'kertas'>
+                    <img src='/images/kertas.png' alt=''>
+                </div>
+                <div class= 'row d-flex justify-content-center align-items-center' id= 'gunting' >
+                    <img src='/images/gunting.png' alt=''>
+                </div>
+            </div> 
+        </div>  
+    </section>
+
+    <script>
+
+        class Game{
+
+            constructor(valuePlayer, valueCom){
+                this.valuePlayer = valuePlayer
+                this.valueCom = valueCom
+            }
+
+            pilihanPlayer(){
+                let player = document.querySelectorAll('#user div')
+                for(let index = 0; index < player.length; index++){ 
+                    player[index].addEventListener('click', () => {
+                        this.valuePlayer = index
+                        this.valueCom = this.randomvalue()
+                        this.styling(index)
+                        console.log(this.valuePlayer)
+                        console.log(this.valueCom)
+                        this.stylingComp(this.valueCom)
+                        this.result(this.valuePlayer, this.valueCom)
+                    })
+                }
+            }
+
+            randomvalue(){
+                let random = Math.floor(Math.random() * 3)
+                return random
+            }
+
+            styling(element){
+                let player = document.querySelectorAll('#user div')
+                for(let index = 0; index < player.length; index++){ 
+                    if (index == element){
+                        player[index].style.background = 'grey'
+                    } else {
+                        player[index].style.background = 'none'
+                    }
+                }
+            }
+
+            stylingComp(element){
+                let comp = document.querySelectorAll('#com div')
+                for(let index = 0; index < comp.length; index++){ 
+                    if (index == element){
+                        console.log('masuk')
+                        comp[index].style.background = 'grey'
+                    } else {
+                        comp[index].style.background = 'none'
+                    }
+                }
+            }
+
+            stylingResult(hasil){
+                document.getElementById('result').style.backgroundColor = '#4C9654'
+                document.getElementById('vs').style.display = 'none'
+                document.getElementById('result').style.display = 'block'
+                console.log(hasil)
+                document.getElementById('result').innerHTML = hasil
+
+                if(hasil == 'DRAW'){
+                    document.getElementById('result').style.backgroundColor = '#035B0C'
+                }
+            }
+
+
+            result (user, comp){
+                let check = ''
+                console.log(user + ' user')
+                console.log(comp +' comp')
+                if(user == comp){
+                    check = 'DRAW'
+                } else if (user == 2 && comp == 0){
+                    check = 'COM WIN'
+                } else if (user == 2 && comp == 1){
+                    check = 'PLAYER 1 WIN'
+                } else if (user == 1 && comp == 0){
+                    check = 'PLAYER 1 WIN'
+                } else if (user == 1 && comp == 2){
+                    check = 'COM WIN'
+                } else if (user == 0 && comp == 1){
+                    check = 'COM WIN'
+                } else if (user == 0 && comp == 2){
+                    check = 'PLAYER 1 WIN'
+                }
+                console.log(check)
+                this.stylingResult(check)
+            }
+
+            resetGame(){
+                console.log('reset')
+                this.valueComp = null
+                this.valuePlayer = null
+
+                let player = document.querySelectorAll('#user div')
+                for(let index = 0; index < player.length; index++){ 
+                    player[index].style.background = 'none'
+                }
+
+                let comp = document.querySelectorAll('#com div')
+                for(let index = 0; index < comp.length; index++){ 
+                    comp[index].style.background = 'none'
+                }
+
+                document.getElementById('vs').style.display = 'block'
+                document.getElementById('result').style.display = 'none'
+
+            }
+        }
+
+        let game = new Game(null, null)
+        game.pilihanPlayer();
+  
+
+        $(function(){
+            $.getJSON('https://www.tokopedia.com/', function(data) {
+                console.log(data);
+            });
+        });
+
+    
+    </script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src='https://code.jquery.com/jquery-3.2.1.slim.min.js' integrity='sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN' crossorigin='anonymous'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js' integrity='sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q' crossorigin='anonymous'></script>
+    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js' integrity='sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl' crossorigin='anonymous'></script>
+  </body>
+</html>
