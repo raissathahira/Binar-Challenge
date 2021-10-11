@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  </head>
+  <body>
+        
+    <style>
+
+
+    html {
+        overflow-x: hidden;
+    }
+    
+    #title { 
+        margin-top: 10vh;
+        margin-bottom: 5vh;
+    }
+    
+    #title h3 {
+        font-size: 3em;
+        font-weight: bold;
+        color: #EA5146;
+    }
+    
+    .card{
+        background-color: #8BC6A5;
+        border-radius: 20px;
+    }
+    
+    table, th, td {
+        background-color: #8BC6A5;
+        color:#462E81;
+    }
+    
+    .form-control {
+        border-radius: 20px;
+    }
+    
+    .btn{
+        border-radius: 20px;
+        background-color:#462E81;
+        font-size: 12px;
+        font-family: 'Varela Round', sans-serif; 
+        font-weight: 600;
+        border-color:#462E81;
+        color: white;
+    
+    
+    }
+    
+    input{
+        background-color: #462E81;
+        color:  #8BC6A5;
+    }
+    
+
+    </style>
+    
+    <section id="title" class="text-center section">
+        <h3>List User</h3>
+    </section>
+
+
+    <section id="catalogue-section" class="text-center container">
+        <div class="card shadow mb-5" style="margin:5vw;">
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="table" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Username</th>
+                            <th>Email</th>
+                            <th>Name</th>
+                            <th>Adress</th>
+                            <th>Phone Number</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Fungsi ini digunakan untuk mengulang tabel di bawah sebanyak jumlah user di database -->
+                        <% for(let i = 0; i < user.length; i++) { %>
+                        <tr>
+                          <td><%= i + 1 %></td>
+                          <td><%= user[i].username %></td>
+                          <td><%= user[i].email %></td>
+                          <td><%= user[i].user_biodata? `${user[i].user_biodata.nama}`: '' %></td>
+                          <td><%= user[i].user_biodata? `${user[i].user_biodata.alamat}`: '' %></td>
+                          <td><%= user[i].user_biodata? `${user[i].user_biodata.notelp}`: '' %>
+                          <td> <button type="button" class="btn btn-info" onclick="window.location.href = `/users/<%= user[i].id %>`"> Edit </button></td>
+                          <td> <button type="button" class="btn btn-danger" onclick="deleteUser(`<%= user[i].id %>`)"> Delete </button></td>
+                        </tr>
+                        <% } %>
+                      </tbody>
+                    
+                </table>
+              </div>
+            </div>
+        </div>
+        </div>
+        
+    </section>
+    <script>
+        function deleteUser(id){
+        alert('Apakah anda yakin ingin mengahapus user ini?')
+        fetch('/users/' + id, {
+              method: 'DELETE',
+            })
+            .then(res => res.text()) // or res.json()
+            .then(res => console.log(res))
+      }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  
+  </body>
+</html>

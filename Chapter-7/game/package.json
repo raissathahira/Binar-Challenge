@@ -1,0 +1,32 @@
+{
+  "name": "game",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start-dev": "NODE_ENV=development nodemon ./bin/www",
+    "start-test": "NODE_ENV=test nodemon ./bin/www",
+    "create-db-test": "NODE_ENV=test sequelize db:create",
+    "create-db-dev": "NODE_ENV=development sequelize db:create"
+  },
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "ejs": "^2.6.2",
+    "express": "^4.17.1",
+    "express-flash": "0.0.2",
+    "express-session": "^1.17.2",
+    "express-validator": "^6.12.2",
+    "http-errors": "~1.6.3",
+    "mongoose": "^6.0.10",
+    "morgan": "~1.9.1",
+    "passport": "^0.5.0",
+    "pg": "^8.7.1",
+    "sequelize": "^6.7.0"
+  },
+  "main": "app.js",
+  "devDependencies": {},
+  "author": "raissa",
+  "license": "ISC",
+  "description": ""
+}
